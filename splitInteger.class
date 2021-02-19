@@ -1,0 +1,25 @@
+fun splitInteger(_num: Int, _parts: Int): ArrayList<Int> {
+    var ans: ArrayList<Int> = arrayListOf(_parts)
+
+    var x: Int = 0;
+    while (x<_parts-1){
+        ans.add(0)
+        x++
+    }
+    x=0
+    while (x <= _parts-1) {
+        println(x)
+        ans[x]= _num / _parts
+        println(ans[x])
+        x++
+    }
+    x = 0
+    while (x < _num % _parts) {
+
+        ans[x] = ans[x] + 1
+        x++
+
+    }
+ans.reverse()
+return ans
+}
